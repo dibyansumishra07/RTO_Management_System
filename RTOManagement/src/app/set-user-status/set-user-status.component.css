@@ -1,0 +1,197 @@
+section {
+  padding-top: 6%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.setUserStats h1 {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+
+.setUserStats h3 {
+  margin: 20px 0;
+}
+
+.setUserStats .credentials {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+}
+
+.setUserStats .credentials .inputBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.setUserStats .credentials .inputBox input {
+  border: none;
+  background: none;
+  color: white;
+  outline: none;
+  border-bottom: 2px solid white;
+  width: 300px;
+  margin: 0 0 0 10px;
+}
+
+.btn {
+  margin: 10px 0;
+}
+
+.formDetails {
+  width: 50%;
+  display: flexbox;
+  flex-direction: column;
+  background-color: #141432;
+  border-radius: 15px;
+  padding: 60px 0 0 60px;
+}
+
+.formDetails .details {
+  display: flex;
+  margin: auto;
+  text-align: left;
+}
+
+.formDetails .details p {
+  width: 100%;
+  display: flexbox;
+  margin: 15px 20px 0 20px;
+  text-align: left;
+  font-weight: bolder;
+}
+.details .status {
+  color: red;
+}
+span {
+  font-weight: normal;
+  margin-left: 5px;
+}
+.vehicleType span {
+  font-size: 14px;
+}
+
+select {
+  display: none;
+}
+select,
+option {
+  width: 200px;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-left: 10px;
+  color: white;
+}
+
+option {
+  color: white;
+  background: #141414;
+}
+
+/*Button style*/
+.buttons {
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: space-around;
+  width: inherit;
+  margin: 20px 0px;
+}
+
+.buttons .btn {
+  background: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 10px 10px;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.buttons .btn:hover {
+  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 1),
+    inset -2px -2px 8px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*overlay box or msg box*/
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.787);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.overlay .closeOverlay {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+
+.overlay .msg-box {
+  width: 550px;
+  height: 350px;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 20px;
+}
+.previousPage {
+  position: absolute;
+  left: 2%;
+  top: 15%;
+  background: linear-gradient(15deg, #2c3a47, #d6a2e8);
+  color: white;
+  padding: 10px 20px;
+}
+
+.previousPage:hover {
+  background: linear-gradient(15deg, #d6a2e8, #2c3a47);
+}
+
+@media only screen and (max-width: 1000px) {
+  section {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200vh;
+  }
+  .setUserStats h1 {
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .previousPage {
+    top: 8%;
+  }
+  .formDetails {
+    width: 60%;
+  }
+}

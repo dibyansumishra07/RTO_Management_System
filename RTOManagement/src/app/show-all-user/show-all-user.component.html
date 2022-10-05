@@ -1,0 +1,74 @@
+<section class="showAllUser">
+  <app-nav-bar></app-nav-bar>
+  <div class="details">
+    <h1>Show All Users</h1>
+    <div class="tableWrap">
+      <table class="table text-white">
+        <thead>
+          <tr class="table-dark text-dark">
+            <th id="slno">SlNo</th>
+            <th id="appId" style="cursor: pointer;" (click)="printByID()">
+              AppId
+            </th>
+            <th id="status" style="cursor: pointer;" (click)="printByLic()">
+              Status of Lic
+            </th>
+            <th id="name">Name</th>
+            <th id="licNo">LLNo</th>
+            <th id="licNo">DlNo</th>
+            <th id="vehicleType">vehicle Type</th>
+            <th id="dateOfBirth">DOB</th>
+            <th id="phNo">Phone No</th>
+            <th id="email">emailId</th>
+            <th id="gender">Gender</th>
+            <th id="address">Address</th>
+            <th id="state">State</th>
+            <th id="pin">Pin</th>
+            <th id="country">Country</th>
+            <th id="applyDate">Apply Date</th>
+            <th id="expiryDate">Expiry Date</th>
+          </tr>
+        </thead>
+
+        <!-- <div class="scrollable"> -->
+        <tbody *ngFor="let user of users; let itemNo = index">
+          <tr>
+            <th scope="row">{{ itemNo + 1 }}</th>
+            <td>{{ user.appId }}</td>
+            <td class="text-info">{{ user.licStatus }}</td>
+            <td>{{ user.userName }}</td>
+            <td>{{ user.llNo }}</td>
+            <td>{{ user.dlNo }}</td>
+            <td>{{ user.vehicleType }}</td>
+            <td>{{ user.dob | date }}</td>
+            <td>{{ user.phNo }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.gender | uppercase }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ user.state }}</td>
+            <td>{{ user.pin }}</td>
+            <td>{{ user.country }}</td>
+            <td>{{ user.applyDate }}</td>
+            <td>{{ user.expiryDate }}</td>
+          </tr>
+        </tbody>
+        <!-- </div> -->
+      </table>
+    </div>
+
+    <div class="previousPage btn" routerLink="/adminMenu">
+      <i class="fas fa-undo mr-2"></i>Previous Page
+    </div>
+    <div class="searchBox">
+      <input
+        type="text"
+        class="search"
+        (input)="searchBy()"
+        placeholder="Find By Name.."
+      />
+      <div class="button"><i class="fas fa-search mr-2"></i>Search</div>
+    </div>
+  </div>
+  <button class="more dataBtn">More</button>
+  <h3 class="not-found">No Users Found!</h3>
+</section>

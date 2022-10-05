@@ -1,0 +1,95 @@
+<div class="contain" id="fullpage">
+  <section class="section body" id="home">
+    <h1>RTO Management</h1>
+
+    <a class="button apply" routerLink="/menu">Apply Now</a>
+
+    <header class="head">
+      <div class="hamberg">
+        <div class="icon"></div>
+      </div>
+      <div class="navbar">
+        <div class="logo"></div>
+        <div class="linknav">
+          <a href="/#home"><span>Home</span></a>
+          <a href="/#about"><span>About</span></a>
+          <a href="/#contact"><span>Contact</span></a>
+          <a routerLink="/menu"><span>Access as User</span></a>
+          <a routerLink="/adminlogin"><span>Access as Admin</span></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="checkbox">
+      <input type="checkbox" class="check" />
+    </div>
+  </section>
+  <!-- TODO -->
+  <section class="section about" id="about">
+    <h2>About Us</h2>
+    <div class="imagecar">
+      <img src="{{ about_img }}" alt="About Us" />
+    </div>
+    <div class="aboutText">
+      This website is designed and developed by XYZ company. Our company is
+      developing this type of amazing web-based application since 2020. We can
+      develope your dream website in a futuristic way. We believe in client
+      satisfaction and respect their requirements.
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="imageContact">
+      <img src="{{ contact_img }}" alt="Contact Us" />
+    </div>
+    <div class="feedBackForm">
+      <form>
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="fullname"
+          placeholder="Your Full Name.."
+          required
+        />
+
+        <label for="lname">Email ID</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email Id.."
+          required
+        />
+
+        <label for="subject">Subject</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 150px;"
+          required
+        ></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <!-- !Social Site links -->
+    <div class="contactform">
+      <a href="https://www.facebook.com/vellaprogrammer" target="_blank"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="mailto:rtomgmtsys@gmail.com" target="_blank"
+        ><i class="fas fa-envelope"></i>
+      </a>
+      <a href="twitter"><i class="fab fa-twitter"></i> </a>
+      <a href="https://www.instagram.com/vella.programmer/" target="_blank"
+        ><i class="fab fa-instagram"></i>
+      </a>
+      <a href="github.com" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="footer">&copy;{{ copy }}</div>
+  </section>
+</div>

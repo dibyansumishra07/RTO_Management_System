@@ -1,0 +1,37 @@
+<section class="re-new-lic">
+  <app-nav-bar></app-nav-bar>
+  <div class="data-container">
+    <h1>
+      Renew Licence
+    </h1>
+    <div class="lic-details">
+      <p class="status">
+        Status Of Lic: <span>{{ updatedUser.licStatus }}</span>
+      </p>
+      <p class="dlNo">
+        LL Number: <span>{{ updatedUser.dlNo }}</span>
+      </p>
+    </div>
+    <div class="personal-details">
+      <p class="fullName">
+        Full Name: <span>{{ updatedUser.userName }}</span>
+      </p>
+      <p class="vehicleType">
+        Renewed Licence Date: <span>{{ updatedUser.expiryDate }}</span>
+      </p>
+    </div>
+  </div>
+  <div class="img">
+    <img src="../../assets/img/aboutcar.svg" alt="renew image" />
+  </div>
+  <div class="overlay">
+    <div class="msg-box">
+      <h1>{{ msgTitle }}</h1>
+      <p>{{ msg }}</p>
+      <div class="btn btn-danger closeBtn">Close</div>
+    </div>
+    <div class="closeOverlay">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</section>

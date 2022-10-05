@@ -1,0 +1,168 @@
+.getTestDrive {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.details {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.questionSection {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+}
+input {
+  cursor: pointer;
+}
+
+.details h1 {
+  margin-bottom: 30px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.question div {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+}
+
+.question div p {
+  margin: 10px;
+  padding: 0;
+}
+
+.ans {
+  color: rgba(226, 177, 103, 0.959);
+  font-style: italic;
+  font-size: 18px;
+}
+
+/*Button style*/
+.buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: inherit;
+  margin: 20px 0px;
+}
+
+.button {
+  background: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 10px 10px;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button:hover {
+  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 1),
+    inset -2px -2px 8px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.img {
+  width: 30%;
+}
+
+/*overlay box or msg box*/
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.overlay .closeOverlay {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+  z-index: 1111;
+}
+
+.overlay .msg-box {
+  width: 550px;
+  height: 350px;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+/*name of candidate on right side*/
+.nameOfCandidate {
+  position: absolute;
+  right: 8%;
+  top: 20%;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.qstn {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1000px) {
+  .ans {
+    font-size: 13px;
+  }
+  .img {
+    display: none;
+  }
+  .questionSection {
+    font-size: 13px;
+  }
+  .question div p {
+    margin: 5px;
+  }
+  .nameOfCandidate {
+    font-size: 14px;
+    right: 5%;
+  }
+  .buttons {
+    left: 45%;
+  }
+}

@@ -1,0 +1,425 @@
+.contain {
+  /* Setting the height of the webpage */
+  height: 100vh;
+  /* Setting the width of the webpage */
+  width: 100%;
+  /* Setting the position of the element: behind or front */
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.body h1 {
+  /* Setting the position of that element: Scroll with page */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  /* TODO */
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  font-size: 55px;
+}
+
+.body .button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  padding: 10px 30px;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  box-shadow: -2px -2px 20px rgba(255, 255, 255, 1),
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 10px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+
+  text-decoration: none;
+  color: white;
+}
+
+.body .button:hover {
+  box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* .body .hamberg {
+  color: white;
+  font-size: 25px;
+  position: fixed;
+  right: 40px;
+  top: 30px;
+  z-index: 1111111;
+  cursor: pointer;
+} */
+.body .hamberg {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 40px;
+  top: 30px;
+  z-index: 1111111;
+  /* Changing the cursor type*/
+  cursor: pointer;
+}
+
+.icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.icon:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  top: 4px;
+  transition: 0.5s;
+  box-shadow: 0 10px 0 #fff;
+}
+
+.icon:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  bottom: 4px;
+  transition: 0.5s;
+}
+
+header.active .icon:before {
+  top: 14px;
+  box-shadow: 0 0 0 #fff;
+  transform: rotate(45deg);
+}
+
+header.active .icon:after {
+  bottom: 14px;
+  transform: rotate(-45deg);
+}
+
+header.active .navbar {
+  transform: translate(0%);
+}
+
+/*Nav bar right side */
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  z-index: 11111111;
+}
+
+.body .navbar {
+  width: 300px;
+  height: 100vh;
+  z-index: 11111111;
+  background: rgba(233, 227, 227, 0.4);
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.6s ease;
+  transform: translate(150%);
+}
+
+.body .navbar .linknav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 11111;
+}
+
+.body .navbar .linknav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin: 15px 0px;
+  text-align: center;
+  position: relative;
+  transition: all 200ms linear;
+}
+.body .navbar .linknav a:before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  height: 3px;
+  width: 0;
+  background: white;
+  transform: translateX(-150%);
+  transition: all 200ms linear;
+}
+.body .navbar .linknav a:hover {
+  transform: translateX(20%) scale(1.1);
+  text-shadow: 0px 0px 10px rgba(37, 28, 28, 0.185);
+}
+.body .navbar .linknav a:hover:before {
+  width: 20px;
+}
+.logo {
+  background: url("../../assets/img/RtoManagementLogo.png");
+  background-position: center;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transform: translateY(-45%);
+}
+
+/*Section 2 about*/
+
+.about {
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about h2 {
+  font-size: 35px;
+  position: absolute;
+  left: 8%;
+  top: 25%;
+}
+
+.about .imagecar {
+  width: calc(100% / 1.6);
+  height: calc(100% / 1.6);
+  position: absolute;
+  left: 60%;
+  top: 30%;
+}
+
+.about .imagecar img {
+  width: calc(100% / 1.6);
+  height: calc(100% / 1.6);
+}
+
+.about .aboutText {
+  font-size: 15px;
+  width: calc(100% / 2.5);
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  letter-spacing: 2px;
+  line-height: 1.8;
+}
+
+/*contact page */
+.contact {
+  padding: 30px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact h2 {
+  font-size: 35px;
+  position: absolute;
+  left: 8%;
+  top: 20%;
+}
+
+.contact .imageContact {
+  width: calc(100% / 1.6);
+  height: calc(100% / 1.6);
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+
+.contact .imageContact img {
+  width: calc(100% / 1.6);
+  height: calc(100% / 1.6);
+}
+
+.contact .contactform {
+  font-size: 20px;
+  width: calc(100% / 3);
+  height: calc(100% / 1.8);
+  position: absolute;
+  left: 10%;
+  top: 80%;
+  padding: 50px;
+  display: flex;
+}
+
+.contact .contactform a {
+  text-decoration: none;
+  color: white;
+  margin: 10px 15px;
+}
+.contact .contactform a:hover {
+  transform: scale(1.2);
+  text-shadow: 0px 0px 10px rgba(128, 128, 128, 0.863),
+    0px 0px 20px rgba(128, 128, 128, 0.63);
+}
+
+/*Feedback from style*/
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  resize: vertical;
+  background: none;
+  color: white;
+}
+input[type="submit"] {
+  color: #4caf50;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+.feedBackForm {
+  font-size: 15px;
+  width: calc(100% / 3);
+  height: calc(100% / 1.8);
+  position: absolute;
+  left: 55%;
+  top: 15%;
+  padding: 40px;
+}
+
+/* .contact .contactform a em {
+  font-size: 60px;
+} */
+
+.footer {
+  font-size: 13px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+/*checkbox darkmode */
+
+.checkbox {
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox .check {
+  width: 100%;
+  height: 100%;
+  background: #c3c3c3;
+  -webkit-appearance: none;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  position: relative;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.checkbox .check:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-sizing: border-box;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  box-shadow: 0 0 0px 2px white, inset 0 0 2px rgba(0, 0, 0, 0.5),
+    inset 0 0 4px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.checkbox .check:checked:before {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+}
+
+.checkbox .check:checked {
+  background: #4c4f51;
+}
+
+@media only screen and (max-width: 850px) {
+  .body h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .body h1 {
+    font-size: 30px;
+  }
+
+  .feedBackForm {
+    display: none;
+  }
+  .footer {
+    font-size: 10px;
+  }
+
+  .about .aboutText {
+    font-size: 12px;
+  }
+  .body .button {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+
+  .body .hamberg {
+    font-size: 18px;
+  }
+  .contact .imageContact {
+    left: 40%;
+    top: 40%;
+  }
+}

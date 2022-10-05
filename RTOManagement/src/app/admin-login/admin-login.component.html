@@ -1,0 +1,81 @@
+<section class="adminlogin">
+  <app-nav-bar></app-nav-bar>
+  <div class="loginform">
+    <h3>Login as Admin</h3>
+
+    <div class="username">
+      <i class="fas fa-envelope"></i>
+      <input
+        type="text"
+        class="adminemail"
+        [(ngModel)]="Admin.email"
+        placeholder="Admin Email ID"
+      />
+    </div>
+    <div class="userpass">
+      <i class="fas fa-lock"></i>
+      <input
+        type="password"
+        class="adminpass"
+        [(ngModel)]="Admin.password"
+        placeholder="Admin Password"
+      />
+      <i class="fas fa-eye" id="eye"></i>
+    </div>
+    <!-- <div class="otherOptions">
+      <a routerLink="/forgotPassword" class="forgotPass"> forgot Password</a>
+    </div> -->
+    <div class="buttons">
+      <button class="btn btn-reset" (click)="onReset()">
+        Reset
+      </button>
+      <button class="btn btn-submit submitBtn" (click)="onSubmit()">
+        Submit
+      </button>
+    </div>
+  </div>
+  <div class="btn buttonArrow" title="Forgot Password" (click)="onForgot()">
+    <i class="fas fa-lock"></i>
+  </div>
+  <div class="registerform">
+    <h3>Forgot Password</h3>
+    <div class="registerId">
+      <i class="fas fa-user-cog"></i>
+      <input
+        type="text"
+        class="regAdminId"
+        placeholder="Admin Name"
+        [(ngModel)]="NewAdmin.adminName"
+      />
+    </div>
+    <div class="registerPass">
+      <i class="fas fa-mail-bulk"></i>
+      <input
+        type="text"
+        class="regAdminPass"
+        [(ngModel)]="NewAdmin.email"
+        placeholder="Admin Email"
+      />
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-submit ml-2" (click)="sendPassword()">
+        Send Password
+      </button>
+    </div>
+  </div>
+
+  <div class="loginimage">
+    <img src="{{ admin_img }}" />
+  </div>
+  <div class="overlay">
+    <div class="msg-box">
+      <h1>{{ msgTitle }}</h1>
+      <p>{{ msg }}</p>
+      <div class="btn btn-danger closeBtn">Close</div>
+    </div>
+    <div class="closeOverlay">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</section>

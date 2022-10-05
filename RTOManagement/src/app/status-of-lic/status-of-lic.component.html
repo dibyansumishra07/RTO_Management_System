@@ -1,0 +1,83 @@
+<section class="status-of-lic">
+  <app-nav-bar></app-nav-bar>
+  <div class="data-container">
+    <h1>Status of Licence</h1>
+    <div class="lic-details">
+      <p class="appId">
+        Application ID: <span style="font-weight: bold;">{{ User.appId }}</span>
+      </p>
+      <p class="vehicleType">
+        Vehicle Type: <span>{{ User.vehicleType }}</span>
+      </p>
+    </div>
+    <div class="lic-details">
+      <p class="llNo">
+        LL Number/DL Number:
+        <span style="font-weight: bold;">{{ User.llNo }}</span>
+      </p>
+      <p class="status">
+        Status Of Lic: <span>{{ User.licStatus }}</span>
+      </p>
+    </div>
+    <div class="personal-details">
+      <p class="fullName">
+        Full Name: <span>{{ User.userName }}</span>
+      </p>
+      <p class="state">
+        State: <span>{{ User.state }}</span>
+      </p>
+    </div>
+    <div class="app-details">
+      <p class="phNo">
+        Phone No: <span>{{ User.phNo }}</span>
+      </p>
+      <p class="email">
+        Email Id: <span>{{ User.email }}</span>
+      </p>
+    </div>
+    <div class="birth-details">
+      <p class="dob">
+        Date of Birth: <span>{{ User.dob }}</span>
+      </p>
+
+      <p class="address">
+        Address: <span>{{ User.address }}</span>
+      </p>
+    </div>
+    <div class="address-details">
+      <p class="pin">
+        Pin: <span>{{ User.pin }}</span>
+      </p>
+      <p class="country">
+        Country: <span>{{ User.country }}</span>
+      </p>
+    </div>
+    <div class="lic-dates">
+      <p class="apply-date">
+        Apply Date: <span>{{ User.applyDate }}</span>
+      </p>
+      <p class="expiry-date">
+        Expiry date: <span>{{ User.expiryDate }}</span>
+      </p>
+    </div>
+    <div class="lic-dates">
+      <p class="testDriveDate">
+        Test Drive Date: <span>{{ User.testDriveDate }}</span>
+      </p>
+      <p class="adhar">
+        Adress Proof: <span>{{ User.adhar }}</span>
+      </p>
+    </div>
+    <div class="lic-dates">
+      <p class="bloodGroup">
+        Blood Group Certficate: <span>{{ User.bloodGroupCertificate }}</span>
+      </p>
+      <p class="certificates">
+        Education Certificate: <span>{{ User.certificate }}</span>
+      </p>
+    </div>
+  </div>
+  <div class="img">
+    <img src="../../assets/img/statusOfLIc.svg" alt="" />
+  </div>
+</section>

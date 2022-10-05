@@ -1,0 +1,131 @@
+<!-- <app-user-login></app-user-login> -->
+<section class="applyDl">
+  <app-nav-bar></app-nav-bar>
+  <div class="leftSide">
+    <h1>Driving Licence</h1>
+    <form>
+      <div class="vehicle">
+        <label for="vehicleType">Type of Vehicle<span>*</span></label>
+        <select id="vehicleType" disabled>
+          <option value="{{ User.vehicleType }}">{{ User.vehicleType }}</option>
+        </select>
+
+        <label class="appId" for="appId"> Application ID<span>*</span> </label>
+
+        <input type="text" id="appId" disabled value="{{ User.appId }}" />
+      </div>
+
+      <div class="name">
+        <label for="userName"> Full Name<span>*</span> </label>
+
+        <input type="text" id="userName" value="{{ User.userName }}" disabled />
+
+        <label class="Llno" for="LlNo"> LL Number<span>*</span> </label>
+
+        <input type="email" id="LlNo" disabled value="{{ User.llNo }}" />
+      </div>
+      <div class="location">
+        <label for="gender" class="gender"> Gender<span>*</span> </label>
+
+        <div id="gender">
+          <p>Male</p>
+          <input type="radio" name="gender" value="male" />
+          <p>Female</p>
+          <input type="radio" name="gender" value="female" />
+          <p>Others</p>
+          <input type="radio" name="gender" value="others" />
+        </div>
+
+        <label for="state" class="state"> State<span>*</span> </label>
+
+        <input id="state" disabled type="text" value="{{ User.state }}" />
+      </div>
+
+      <div class="areaLocation">
+        <label class="address" for="address"> Address<span>*</span> </label>
+
+        <input type="text" id="address" disabled value="{{ User.address }}" />
+
+        <label class="pin" for="pin"> Pin<span>*</span> </label>
+
+        <input type="text" id="pin" disabled value="{{ User.pin }}" />
+      </div>
+      <div class="personalDetails">
+        <label for="dob"> Date of Birth<span>*</span> </label>
+
+        <input type="text" id="dob" disabled value="{{ User.dob }}" />
+
+        <label class="bgroup" for="bloodGroup">
+          Blood Group<span>*</span>
+        </label>
+
+        <select id="bloodGroup" disabled>
+          <option value="{{ User.bloodGroup }}">
+            {{ User.bloodGroup }}
+          </option>
+        </select>
+      </div>
+
+      <div class="details">
+        <label for="phNo"> Phone No<span>*</span> </label>
+
+        <input type="text" id="phNo" disabled value="{{ User.phNo }}" />
+
+        <label class="mail" for="email"> Email Id<span>*</span> </label>
+
+        <input type="text" id="email" value="{{ User.email }}" disabled />
+      </div>
+      <div class="files">
+        <label class="file1" for="idProof">Id Proof [Adhaar]</label>
+        <input
+          type="text"
+          id="idProof"
+          name="adhar"
+          [(ngModel)]="User.adhar"
+          disabled
+        />
+        <label class="file2" for="bloodGroupCert"
+          >Blood Group Certificate</label
+        >
+        <input
+          type="text"
+          id="bloodGroupCert"
+          name="bloodGroup"
+          disabled
+          [(ngModel)]="User.bloodGroupCertificate"
+        />
+        <label class="file3" for="certificate">Education Certificate</label>
+        <input
+          type="text"
+          id="certificate"
+          name="certificate"
+          disabled
+          [(ngModel)]="User.certificate"
+        />
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn btn-submit" (click)="onSubmit()">
+          Apply DL
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="rightSide">
+    <ul>
+      <li>These Details can not Updated by User!</li>
+      <li>You only can Update the files Provided by you.</li>
+      <li>If you want to update details please contact to Admin</li>
+    </ul>
+  </div>
+  <div class="overlay">
+    <div class="msg-box">
+      <h1>{{ titleMsg }}</h1>
+      <p>{{ errorMsg }}</p>
+      <div class="btn btn-danger closeBtn">Close</div>
+    </div>
+    <div class="closeOverlay">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<section class="userLoginPage">
+  <app-nav-bar></app-nav-bar>
+  <form class="user-login">
+    <div class="licKey">
+      <i class="fas fa-key"></i>
+      <label for="key">Application ID / LL No / DL No</label>
+      <input type="text" id="key" placeholder="Enter Key" />
+    </div>
+    <div class="licPass">
+      <i class="fas fa-lock"></i>
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" />
+    </div>
+    <div class="buttons">
+      <button type="reset" (click)="onReset()" class="btn btn-reset">
+        Reset
+      </button>
+      <button type="submit" (click)="onSubmit()" class="btn btn-submit">
+        Submit
+      </button>
+    </div>
+  </form>
+
+  <div class="info">
+    <img src="{{ user_img }}" />
+  </div>
+</section>

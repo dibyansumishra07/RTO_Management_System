@@ -1,0 +1,95 @@
+.status-of-lic {
+  display: flex;
+  justify-content: space-around;
+  padding: 10% 40px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.status-of-lic .data-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status-of-lic .data-container h1 {
+  margin: 20px 0;
+}
+
+.status-of-lic .data-container .lic-details,
+.status-of-lic .data-container .personal-details,
+.status-of-lic .data-container .app-details,
+.status-of-lic .data-container .address-details,
+.status-of-lic .data-container .birth-details,
+.status-of-lic .data-container .lic-dates {
+  display: flex;
+  margin: 15px 20px;
+  text-align: left;
+}
+
+.status-of-lic .data-container div p {
+  width: 100%;
+  display: flex;
+  margin: 0 15px;
+  text-align: left;
+}
+
+span {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.status-of-lic .img {
+  width: 40%;
+}
+
+.img img {
+  width: 450px;
+  height: 500px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .img {
+    display: none;
+  }
+  .status-of-lic {
+    display: flex;
+    justify-content: center;
+  }
+
+  .status-of-lic .data-container {
+    font-size: 15px;
+  }
+  .status-of-lic .data-container .lic-details,
+  .status-of-lic .data-container .personal-details,
+  .status-of-lic .data-container .app-details,
+  .status-of-lic .data-container .address-details,
+  .status-of-lic .data-container .birth-details,
+  .status-of-lic .data-container .lic-dates {
+    margin: 10px 15px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .img {
+    display: none;
+  }
+  .status-of-lic {
+    display: flex;
+    justify-content: center;
+  }
+
+  .status-of-lic .data-container {
+    font-size: 11px;
+    height: 500px;
+  }
+  .status-of-lic .data-container .lic-details,
+  .status-of-lic .data-container .personal-details,
+  .status-of-lic .data-container .app-details,
+  .status-of-lic .data-container .address-details,
+  .status-of-lic .data-container .birth-details,
+  .status-of-lic .data-container .lic-dates {
+    margin: 5px 10px;
+  }
+}

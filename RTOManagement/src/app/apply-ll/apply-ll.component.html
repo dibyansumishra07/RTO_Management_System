@@ -1,0 +1,183 @@
+<!--
+@author [Dibyansu Mishra]
+@email [dibyansu.mishra07@gmail.com]
+@create date 2020-06-25 21:23:10
+@modify date 2020-06-25 21:24:05
+@desc [description]
+-->
+
+<!-- !Learner License Page -->
+
+<section class="applyLl">
+  <app-nav-bar></app-nav-bar>
+  <div class="form">
+    <h1>Learner's Licence</h1>
+    <div class="formElement">
+      <div class="vehicle">
+        <label for="vehicleType">Type of Vehicle<span>*</span></label>
+        <select
+          id="vehicleType"
+          name="vehicleType"
+          [(ngModel)]="user.vehicleType"
+        >
+          <option *ngFor="let item of vehicle" value="{{ item }}">{{
+            item
+          }}</option>
+        </select>
+      </div>
+
+      <div class="name">
+        <label for="userName"> Full Name<span>*</span> </label>
+
+        <input
+          type="text"
+          name="userName"
+          id="userName"
+          [(ngModel)]="user.userName"
+        />
+      </div>
+      <div class="location">
+        <label for="gender" class="gender"> Gender<span>*</span> </label>
+
+        <div id="gender">
+          <p>Male</p>
+          <input
+            id="male"
+            type="radio"
+            name="gender"
+            value="male"
+            [(ngModel)]="user.gender"
+            ng-checked="user.gender === male"
+          />
+          <p>Female</p>
+          <input
+            type="radio"
+            name="gender"
+            value="female"
+            [(ngModel)]="user.gender"
+          />
+          <p>Others</p>
+          <input
+            type="radio"
+            name="gender"
+            value="others"
+            [(ngModel)]="user.gender"
+          />
+        </div>
+
+        <label for="state" class="state"> State<span>*</span> </label>
+
+        <select id="state" [(ngModel)]="user.state" name="state">
+          <option *ngFor="let item of state" value="{{ item }}">{{
+            item
+          }}</option>
+        </select>
+      </div>
+
+      <div class="areaLocation">
+        <label class="address" for="address"> Address<span>*</span> </label>
+
+        <input
+          type="text"
+          name="address"
+          id="address"
+          [(ngModel)]="user.address"
+          required
+        />
+
+        <label class="pin" for="pin"> Pin<span>*</span> </label>
+
+        <input
+          type="text"
+          id="pin"
+          name="pin"
+          [(ngModel)]="user.pin"
+          required
+        />
+      </div>
+      <div class="personalDetails">
+        <label for="dob"> Date of Birth<span>*</span> </label>
+
+        <input type="date" id="dob" name="dob" [(ngModel)]="user.dob" />
+
+        <label class="bgroup" for="bloodGroup">
+          Blood Group<span>*</span>
+        </label>
+
+        <select id="bloodGroup" name="bloodGroup" [(ngModel)]="user.bloodGroup">
+          <option *ngFor="let item of blood">
+            {{ item }}
+          </option>
+        </select>
+      </div>
+
+      <div class="details">
+        <label for="phNo"> Phone No<span>*</span> </label>
+
+        <input type="text" id="phNo" name="phNo" [(ngModel)]="user.phNo" />
+
+        <label class="mail" for="email"> Email Id<span>*</span> </label>
+
+        <input
+          type="text"
+          id="email"
+          name="email"
+          [(ngModel)]="user.email"
+          required
+        />
+      </div>
+      <div class="files">
+        <label class="file1" for="idProof">Id Proof [Adhaar]</label>
+        <input type="file" id="idProof" [(ngModel)]="user.adhar" name="adhar" />
+        <label class="file2" for="bloodGroupCert"
+          >Blood Group Certificate</label
+        >
+        <input
+          type="file"
+          id="bloodGroupCert"
+          [(ngModel)]="user.bloodGroupCertificate"
+          name="bloodGroupCert"
+        />
+        <label class="file3" for="certificate">Education Certificate</label>
+        <input
+          type="file"
+          id="certificate"
+          [(ngModel)]="user.certificate"
+          name="certificate"
+        />
+      </div>
+
+      <div class="buttons">
+        <button type="reset" (click)="onReset()" class="btn btn-reset">
+          Reset
+        </button>
+        <button type="submit" (click)="onSubmit()" class="btn btn-submit">
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- !Will be show in the required documents for applying Learning License -->
+  <div class="info">
+    <h4 class="required">Required Document</h4>
+    <ul *ngFor="let item of leftValue">
+      <li>{{ item }}</li>
+    </ul>
+  </div>
+  <!-- TODO -->
+  <div class="errormessages">
+    <div class="msg"></div>
+    <i class="fa fa-times" id="closeMsg"></i>
+  </div>
+
+  <div class="overlay">
+    <div class="msg-box">
+      <h1>{{ msgTitle }}</h1>
+      <p>{{ msg }}</p>
+      <div class="btn btn-danger closeBtn">Close</div>
+    </div>
+    <div class="closeOverlay">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</section>

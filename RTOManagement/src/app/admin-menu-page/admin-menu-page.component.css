@@ -1,0 +1,52 @@
+.adminPage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*body part*/
+
+.adminPage .all-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  line-height: 4;
+  font-size: 17px;
+  text-align: left;
+}
+
+.adminPage .all-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.adminPage .all-links a:hover {
+  color: lightblue;
+  transform: scale(1.2);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  transform-origin: left;
+}
+
+.adminPage .imageformenu {
+  width: 500px;
+  height: 500px;
+}
+
+.adminPage .imageformenu img {
+  width: 500px;
+  height: 500px;
+  transform: translateY(10%);
+  -webkit-transform: translateY(10%);
+  -moz-transform: translateY(10%);
+  -ms-transform: translateY(10%);
+  -o-transform: translateY(10%);
+}
+
+a {
+  display: inline-flexbox;
+  justify-content: space-evenly;
+  align-items: center;
+}
+a span {
+  margin-left: 10px;
+}

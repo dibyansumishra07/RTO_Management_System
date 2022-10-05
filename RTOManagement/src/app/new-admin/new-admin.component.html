@@ -1,0 +1,66 @@
+<section class="menupage">
+  <app-nav-bar></app-nav-bar>
+  <div class="registerform">
+    <h3>Add New Admin</h3>
+    <form>
+      <div class="registerName">
+        <i class="fas fa-user-cog"></i>
+        <input
+          type="text"
+          class="regAdminName"
+          placeholder="Admin Name"
+          (input)="onInput()"
+          [(ngModel)]="Admin.adminName"
+          name="adminName"
+        />
+      </div>
+      <div class="registerEmail">
+        <i class="fas fa-mail-bulk"></i>
+        <input
+          type="text"
+          class="regAdminEmail"
+          placeholder="Admin Email"
+          (input)="onInput()"
+          [(ngModel)]="Admin.email"
+          name="adminEmail"
+        />
+      </div>
+      <div class="registerPass">
+        <i class="fas fa-lock"></i>
+        <input
+          type="text"
+          class="regAdminPass"
+          placeholder="Admin Password"
+          (input)="onInput()"
+          [(ngModel)]="Admin.password"
+          name="adminPass"
+        />
+      </div>
+
+      <div class="buttons">
+        <button type="reset" class="btn btn-reset ml-2">
+          Reset
+        </button>
+        <button class="btn btn-submit ml-2" (click)="onSubmit()">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="loginimage">
+    <img src="../../assets/img/aboutcar.svg" />
+  </div>
+  <div class="overlay">
+    <div class="msg-box">
+      <h1>{{ msgTitle }}</h1>
+      <p>{{ msg }}</p>
+      <div class="btn btn-danger closeBtn" [routerLink]="['/adminMenu']">
+        Close
+      </div>
+    </div>
+    <div class="closeOverlay">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</section>

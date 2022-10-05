@@ -1,0 +1,66 @@
+<section class="allTestDrive">
+  <app-nav-bar></app-nav-bar>
+  <div class="details">
+    <h1>Show All Test Drive Details</h1>
+    <div class="tableWrap">
+      <table class="table text-white">
+        <thead>
+          <tr class="table-dark text-dark">
+            <th id="slno">SlNo</th>
+            <th id="appId">AppId</th>
+            <th id="status">Status of Lic</th>
+            <th id="name">Name</th>
+            <th id="licNo">LLNo</th>
+            <th id="vehicleType">vehicle Type</th>
+            <th id="dateOfBirth">DOB</th>
+            <th id="dateOfTestDrive">Test Drive Date</th>
+            <th id="file1">Residential Cert.</th>
+            <th id="file2">Blood Group Cert.</th>
+            <th id="file3">Educational Cert.</th>
+            <th id="redirect">Approve User</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let user of users; let itemNo = index">
+          <tr>
+            <th scope="row">{{ itemNo + 1 }}</th>
+            <td>{{ user.appId }}</td>
+            <td class="text-danger">{{ user.licStatus }}</td>
+            <td>{{ user.userName }}</td>
+            <td>{{ user.llNo }}</td>
+            <td>{{ user.vehicleType }}</td>
+            <td>{{ user.dob }}</td>
+            <td>{{ user.testDriveDate }}</td>
+            <td id="file1">{{ user.adhar }}</td>
+            <td id="file2">{{ user.bloodGroupCertificate }}</td>
+            <td id="file3">{{ user.certificate }}</td>
+            <td id="approveUser">
+              <i
+                class="fa fa-arrow-circle-right"
+                style="font-size: 20px; cursor: pointer;"
+                [routerLink]="['/adminSetUserStatus']"
+                routerLinkActive="router-link-active"
+                aria-hidden="true"
+              ></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="previousPage btn" routerLink="/adminMenu">
+      <i class="fas fa-undo mr-2"></i>Previous Page
+    </div>
+    <div class="searchBox">
+      <input
+        type="text"
+        class="search"
+        (input)="searchBy()"
+        placeholder="Find By Name.."
+      />
+      <div class="button" (click)="searchBy()">
+        <i class="fas fa-search mr-2"></i>Search
+      </div>
+    </div>
+  </div>
+  <button class="more dataBtn">More</button>
+  <h3 class="not-found">No Users Found!</h3>
+</section>

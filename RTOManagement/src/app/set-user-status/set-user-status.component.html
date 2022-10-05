@@ -1,0 +1,87 @@
+<section>
+  <app-nav-bar></app-nav-bar>
+  <div class="setUserStats">
+    <h1>Set Status Of User</h1>
+    <h3 class="mb-5">Get User By ID</h3>
+    <div class="credentials">
+      <label for="appId">Application ID:</label>
+
+      <div class="inputBox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Enter ID" id="appId" />
+      </div>
+      <button class="btn btn-success" (click)="onSubmit()">Submit</button>
+    </div>
+  </div>
+  <div class="formDetails">
+    <h3 class="mb-5">Status of Licence</h3>
+    <div class="details">
+      <p class="appId">
+        App ID: <span>{{ User.appId }}</span>
+      </p>
+      <p class="llNo">
+        LL Number: <span>{{ User.llNo }}</span>
+      </p>
+    </div>
+    <div class="details">
+      <p class="fullName">
+        Full Name: <span>{{ User.userName }}</span>
+      </p>
+      <p class="vehicleType">
+        Vehicle Type: <span>{{ User.vehicleType }}</span>
+      </p>
+    </div>
+    <div class="details">
+      <p class="testDriveDetails">
+        Test Drive Status: <span>{{ User.testDriveDate }}</span>
+      </p>
+      <p class="testDriveDate">
+        Test Drive Date: <span>{{ User.testDriveDate }}</span>
+      </p>
+    </div>
+    <div class="details">
+      <p class="adhar">
+        Location Certificate: <span>{{ User.adhar }}</span>
+      </p>
+      <p class="blood">
+        BloodGroup Certificate: <span>{{ User.bloodGroupCertificate }}</span>
+      </p>
+    </div>
+    <div class="details">
+      <p class="educational">
+        Education Certificate: <span>{{ User.certificate }}</span>
+      </p>
+      <p class="status">
+        Status:
+        <span
+          ><select name="status" [(ngModel)]="User.licStatus" id="selectStatus">
+            <option value="pending">Pending</option>
+            <option value="approve">Approve</option>
+            <option value="reject">Reject</option>
+          </select></span
+        >
+      </p>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-reset">
+        Reset
+      </button>
+      <button class="btn btn-submit" (click)="onFormSubmit()">
+        Submit
+      </button>
+    </div>
+  </div>
+  <div class="overlay">
+    <div class="msg-box">
+      <h1>{{ msgTitle }}</h1>
+      <p>{{ msg }}</p>
+      <div class="btn btn-danger closeBtn">Close</div>
+    </div>
+    <div class="closeOverlay">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <div class="previousPage btn" routerLink="/adminMenu">
+    <i class="fas fa-undo mr-2"></i>Previous Page
+  </div>
+</section>

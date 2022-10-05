@@ -1,0 +1,88 @@
+<section class="getTestDrive">
+  <app-nav-bar></app-nav-bar>
+  <div class="details">
+    <h1>Get Your Test Drive</h1>
+    <div class="questionSection">
+      <div class="questions" *ngFor="let item of questions; let itemNo = index">
+        <div class="question">
+          <div class="qstn">Q.{{ itemNo + 1 }}. {{ item.question }}</div>
+          <div>
+            1.&nbsp;<input
+              type="radio"
+              name="ans{{ itemNo + 1 }}"
+              id="{{ itemNo }}"
+              value="{{ item.opt1 }}"
+            />
+            <p>{{ item.opt1 }}</p>
+          </div>
+          <div>
+            2.&nbsp;
+            <input
+              type="radio"
+              name="ans{{ itemNo + 1 }}"
+              id="{{ itemNo }}"
+              value="{{ item.opt2 }}"
+            />
+            <p>{{ item.opt2 }}</p>
+          </div>
+          <div>
+            3.&nbsp;
+            <input
+              type="radio"
+              name="ans{{ itemNo + 1 }}"
+              id="{{ itemNo }}"
+              value="{{ item.opt3 }}"
+            />
+            <p>{{ item.opt3 }}</p>
+          </div>
+          <div>
+            4.&nbsp;
+            <input
+              type="radio"
+              name="ans{{ itemNo + 1 }}"
+              id="{{ itemNo }}"
+              value="{{ item.opt4 }}"
+            />
+            <p>{{ item.opt4 }}</p>
+          </div>
+          <div class="ans d-none">Answer is: {{ item.ans }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button
+        class="button cancel"
+        type="cancel"
+        routerLink="/menu"
+        (click)="onBack()"
+      >
+        Back
+      </button>
+
+      <button class="button submit" type="submit" (click)="onSubmit()">
+        Submit
+      </button>
+    </div>
+    <div class="nameOfCandidate">
+      Welcome: <span>{{ User.userName }}</span>
+    </div>
+  </div>
+
+  <div class="img">
+    <h3>Rules of Test</h3>
+    <ul *ngFor="let item of rules">
+      <li>{{ item }}</li>
+    </ul>
+  </div>
+
+  <div class="overlay">
+    <div class="msg-box">
+      <h1>{{ msgTitle }}</h1>
+      <p>{{ msg }}</p>
+      <div class="btn btn-danger closeBtn">Close</div>
+    </div>
+    <div class="closeOverlay">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+</section>

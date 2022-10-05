@@ -1,0 +1,54 @@
+<section class="uploadFiles">
+  <app-nav-bar></app-nav-bar>
+  <form>
+    <div class="files">
+      <div class="files1">
+        <label class="file1" for="idProof">Id Proof [Adhaar]</label>
+        <input type="file" id="idProof" [(ngModel)]="User.adhar" name="adhar" />
+      </div>
+      <div class="files2">
+        <label class="file2" for="bloodGroupCert"
+          >Blood Group Certificate</label
+        >
+        <input
+          type="file"
+          id="bloodGroupCert"
+          [(ngModel)]="User.bloodGroupCertificate"
+          name="bloodGroup"
+        />
+      </div>
+      <div class="files2">
+        <label class="file3" for="certificate">Education Certificate</label>
+        <input
+          type="file"
+          id="certificate"
+          [(ngModel)]="User.certificate"
+          name="certificate"
+        />
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button type="reset" class="btn btn-submit">
+        Reset
+      </button>
+      <button type="submit" class="btn btn-submit" (click)="onSubmit()">
+        Submit
+      </button>
+    </div>
+  </form>
+  <div class="overlay">
+    <div class="msg-box">
+      <h1>{{ msgTitle }}</h1>
+      <p>{{ msg }}</p>
+      <div class="btn btn-danger closeBtn">Close</div>
+    </div>
+    <div class="closeOverlay">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+  <div class="img">
+    <img src="{{ uploadFiles }}" alt="Files" />
+  </div>
+  <div class="name">Name: {{ User.userName }}</div>
+</section>
